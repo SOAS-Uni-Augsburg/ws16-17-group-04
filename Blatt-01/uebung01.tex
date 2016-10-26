@@ -131,6 +131,7 @@ Soziale Insekten haben einfache Verhaltensregeln entwickelt um diese Architektur
 
 %Beispiel Activation-Inhibition Mechanismus.
 %TODO wie genau muss das sein?
+%TODO 
 \subsection{Termitennester --- b}
 \paragraph{Agenten}
 Viele Termiten, die nach und nach ein sehr komplexes Gebäude errichten.
@@ -143,10 +144,19 @@ Lokale Kommunikation zwischen den Termiten
 \paragraph{Interaktionen zwischen Agenten und Umwelt}
 Bauen eines Gebäudes aus dem was da ist, dem Boden.
 \subsection{Vogelschwärme --- a}
-TBD\footnote{Tanner et al., Stable Flocking of Mobile Agents, Part I: Fixed
-	Topology, \url{http://ieeexplore.ieee.org/document/1272910/}, Abgerufen am 24.10.16}
+Vogelschwärme bewegen sich als ganzes einem Muster folgend, ohne einem ersichtlichen Leittier zu folgen. Das Schwarmverhalten von Vögeln lässt sich auch bei anderen Schwarmtieren (Fischen) beobachten. Das Verhalten des Gesamtschwarms resultiert aus dem Verhalten der einzelnen Schwarmtiere.\footnote{\url{https://en.wikipedia.org/wiki/Flocking_(behavior)#Flocking_rules}, Abgerufen am 26.10.16}
 \subsection{Vogelschwärme --- b}
-TBD
+\paragraph{Agenten}
+Jeder am Schwarm teilnehmende Vogel ist ein Agent.
+\paragraph{Einfluss der Umwelt auf das System}
+Vögel bilden Schwärme, um für den Winter nach Süden zu fliegen.
+
+\paragraph{Interaktionen zwischen Agenten}
+Das Verhalten der einzelnen Vögel lässt sich durch drei Regeln (Seperation, Alignment, Cohesion) beschreiben: Die Vögel halten einen gewissen Mindest- und Maximalabstand zueinander und orientieren sich an der Flugrichtung der Nachbarn. 
+
+\paragraph{Interaktionen zwischen Agenten und Umwelt}
+Vögel sind intelligent genug nicht gegen Dinge zu fliegen.
+
 \section{Aufgabe 3}
 
 \subsection{Verhalten ohne disease und grow}

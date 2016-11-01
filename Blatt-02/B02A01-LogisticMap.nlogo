@@ -9,7 +9,7 @@ globals [y-current y-new y-current' y-new' num-turtles-created turtlex0-who turt
 ;; PRE R_ in [0, 4.0), y in [0, 1]
 ;; POST Result of logistic map
 to-report logisticMap [R_ y]
-
+  report R_ * y * ( 1 - y )
 end
 
 ;; the initialization makes sure y-current and y-new are
@@ -17,15 +17,16 @@ end
 ;; PRE: none
 ;; POST: y-current equals y(0); y-new equals y(1)
 to initialize
-  ;; here your code
+  set y-current y0
+  set y-new logisticMap R y-current
 end
-
 ;; The transformation function performs exactly
 ;; one step in the logistic map
 ;; PRE: y-current equals y(t); y-new equals y(t+1)
 ;; POST: y-current equals y(t+1); y-new equals y(t+2)
 to transformFunc
-
+  set y-current y-new
+  set y-new logisticMap R y-current
 end
 
 
@@ -120,7 +121,6 @@ to draw-parabola  ; draws parabola representing logistic map for given value of 
   ]
   ask turtles [die]
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 293
@@ -349,6 +349,76 @@ NIL
 NIL
 NIL
 1
+
+SLIDER
+26
+84
+198
+117
+R
+R
+0.0
+4.0
+2.9
+0.1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+25
+120
+197
+153
+y0
+y0
+0
+1
+0.1
+0.025
+1
+NIL
+HORIZONTAL
+
+MONITOR
+73
+558
+146
+603
+NIL
+y-current
+17
+1
+11
+
+MONITOR
+74
+627
+131
+672
+NIL
+y-new
+17
+1
+11
+
+PLOT
+324
+506
+524
+656
+y-current
+NIL
+NIL
+0.0
+1.0
+0.0
+1.0
+true
+false
+"" ""
+PENS
+"default" 1.0 0 -16777216 true "" "plot y-current"
 
 @#$#@#$#@
 ## WHAT IS IT?

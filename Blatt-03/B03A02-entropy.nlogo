@@ -31,6 +31,7 @@ to setup
 end
 
 to go
+  if ticks >= 200 [ stop ]
   ; random move
   move
   calculateEntropy
@@ -60,10 +61,10 @@ end
 GRAPHICS-WINDOW
 420
 10
-1227
-838
-50
-50
+665
+143
+6
+6
 7.925
 1
 10
@@ -74,10 +75,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--50
-50
--50
-50
+-6
+6
+-6
+6
 1
 1
 1
@@ -93,7 +94,7 @@ world-size
 world-size
 1
 50
-50
+6
 1
 1
 NIL
@@ -108,7 +109,7 @@ bean-count
 bean-count
 1
 5000
-4733
+5000
 1
 1
 NIL

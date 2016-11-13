@@ -113,7 +113,53 @@
 %%\let\clearpage\relax
 
 \section{Aufgabe 3 - Entwurf Simon}
+Formale Definition von Spielen: (Skript Nr. 4 F. 16):\\
+Ein strategisches Spiel $G = \langle N, (A_i )_{i \in N} , (u_i )_{i \in N}\rangle$ besteht aus
+\begin{itemize}
+	\item einer endlichen Menge N = 1,..., n an Spielern
+	\item einer Menge an Aktionen $A_i$ für jeden Spieler
+	\item einer Nutzenfunktion (utility) $u_i$ : $A_1  \times ... \times A_n \rightarrow R$ für jeden
+	Spieler
+\end{itemize}
+\subsection{a}
+Wenden Sie die formale Definition an, um die Entscheidungssimulation zu modellieren.
+Hier:
+\begin{itemize}
+	\item $N$: Computer in einem Netzwerk
+	\item $A_i$: Datei im Cache behalten oder Datei anfordern
+	\item $u_i$: Die Nutzenfunktion ergibt sich aus den Kosten für Anfordern oder Behalten 
+\end{itemize}
 
+\subsection{b}
+Bestimmen Sie die weiteren Nash-Gleichgewichte (nur in reinen Strategien) in Abbildung 1.
+\begin{itemize}
+	\item Nash Gleichgewicht:
+	Für jeden Agenten i = 1, . . . , n gilt, dass $u_i(a) \geq u_i ((a_{-i} , a )) \forall a \in A_i$
+	\item Reine Strategie: Immer nur eine Aktion wählen
+\end{itemize}
+\emph{TODO} Kann ich mir noch keinen richtigen Reim drauf machen, was da alles mit was verglichen werden muss.
+Habs versucht zu skizzieren, aber bin noch nicht ganz durchgestiegen.
 
+\subsection{c}
+\emph{TODO}
+Skizze: siehe Abb. \ref{skz3c}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/Skizze3c.jpg}
+	\caption{Skizze zu 3c}
+	\label{skz3c}
+\end{figure}
 
+\subsection{d}
+Untersuchung Algorithmus:\\
+Durchgänge:
+\begin{enumerate}
+	\item i = b, weil d(i) = 3. $S=\{b\}$, $N=\{a,c,d,e,f\} \rightarrow N=\{c, e\}$
+	\item i = c oder e, weil d(c)=2, d(e)=2. Wähle c. $S=\{b, c\}$, $N=\{e\} \rightarrow N=\{e\}$
+	\item Dasselbe passiert bei der Wahl von e $\rightarrow$ Gleichgewicht $S=\{b, c, e\}$
+\end{enumerate}
+Erzeugt dieser Algorithmus stets ein Nash Gleichgewicht?
+Zum Schluss bleiben immer Knoten $S$ übrig, die cachen sollen.
+Ist das immer ein Gleichgewicht?
+TODO
 \end{document}
